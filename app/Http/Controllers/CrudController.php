@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\crud;
 use Illuminate\Http\Request;
-use App\Imports\ExcelImport;
-use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Http\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-use DB;
+use Excel;
+use App\Imports\crudImport;
+use App\Models\crud;
+
 
 class CrudController extends Controller
 {
@@ -24,10 +25,7 @@ class CrudController extends Controller
     {
         return view('welcome');
     }
-    public function fisheris_add()
-    {
-        return view('fisheris_add');
-    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -59,10 +57,6 @@ class CrudController extends Controller
         $res->mobile_no = $request-> input('mobile_no');
         //$ sign gula db er field name r input gula holo form er input field er nam
 
-
-
-
-
         $res->save();
 
         $request-> session()->flash('msg','data submitted');
@@ -77,6 +71,8 @@ class CrudController extends Controller
      */
     public function show(crud $crud)
     {
+
+
         return view ('crud_show')->with('crudsArr',Crud::all());//with er 1st ta holo database table r 2nd ta holo controller name
 
     }
@@ -132,19 +128,19 @@ class CrudController extends Controller
     {
         return view('demo');
     }
-    public function excel( Request $res)
+
+    public function bootstrap()
     {
-        $file = $res->file;
-        Excel::import(new ExcelImport, $file);
-        echo "success";
+        return view('bootstrap');
     }
 
-    public function search( Request $request)
+    public function page()
     {
-        $search = $request->get('search');
-        $posts = DB::table('cruds')->where('name','like','%'.$search.'%')->paginate(2);
-        return view('crud_show',['posts' ->$posts]);
+        return view('paginatetablecheck');
     }
+
+
+
 }
 /*
   $path = $res->file->getRealPath();

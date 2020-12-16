@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'App\Http\Controllers\CrudController@welcome');
+Route::get('/', 'App\Http\Controllers\CrudController@bootstrap');
 
 
 Route::get('/welcome', 'App\Http\Controllers\CrudController@welcome');
@@ -22,7 +22,7 @@ Route::get('crud_create','App\Http\Controllers\CrudController@create');
 Route::POST('crud_submit','App\Http\Controllers\CrudController@store');
 Route::get('crud_edit/{id}','App\Http\Controllers\CrudController@edit');
 Route::POST('crud_update/{id}','App\Http\Controllers\CrudController@update')->name('crud_update');
-Route::POST('excel','App\Http\Controllers\CrudController@excel')->name('excel');
+Route::post('import','App\Http\Controllers\CrudController@upload')->name('crud.import');
 Route::get('search','App\Http\Controllers\CrudController@search');
 
 
@@ -43,6 +43,16 @@ Route::POST('socialServiceUpdate/{id}','App\Http\Controllers\SocialServiceContro
 
 
 Route::get('/demo', 'App\Http\Controllers\CrudController@demo');
+
+Route::get('importForm','App\Http\Controllers\gpController@importForm');
+Route::post('import','App\Http\Controllers\gpController@upload')->name('gp.import');
+
+Route::get('/boot', 'App\Http\Controllers\CrudController@bootstrap');
+Route::get('/page', 'App\Http\Controllers\CrudController@page');
+
+
+
+
 
 
 

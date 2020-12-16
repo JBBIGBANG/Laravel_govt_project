@@ -1,0 +1,25 @@
+
+.show{
+    margin-left:1cm;
+    margin-top:.5cm;
+
+}
+.well{
+    background: rgb(203,179,140);
+    background: linear-gradient(90deg, rgba(203,179,140,1) 7%, rgba(104,172,190,1) 52%, rgba(137,137,180,1) 84%);
+    margin-top:1px;
+    border: 1px solid rgba(26, 11, 11, 0.11);
+    border-radius: 25px;
+    z-index: -1;
+
+}
+.well img{
+
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+   }
+.w{
+    display:none;
+}

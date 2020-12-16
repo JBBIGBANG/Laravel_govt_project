@@ -1,4 +1,6 @@
+<div class="nav">
 @include('navbar')
+</div>
 <html>
     <head>
         <style>
@@ -59,23 +61,17 @@
           </div>
 
 
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="/images/s.jpg" alt="Card image cap" style="height:100px;">
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <a href="#" class="btn btn-primary">উপভোগকারীর সংখ্যা </a>
-            </div>
-          </div>
+
       </div>
 
+      <div class="card1"  style="width: 500px, height= 500px;">
 
-
-
-      <div class="card1" style="width: 18rem;">
-        <img class="card-img-top" src="/images/o.jpg" alt="Card image cap" style="height:100px;">
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <a href="#" class="btn btn-primary">প্রাপ্ত আবেদন সংখ্যা </a>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/images/s.jpg" alt="Card image cap" style="height:100px;">
+            <div class="card-body">
+            <h5 class="card-title"></h5>
+            <a href="#" class="btn btn-primary">উপভোগকারীর সংখ্যা </a>
+            </div>
         </div>
       </div>
 

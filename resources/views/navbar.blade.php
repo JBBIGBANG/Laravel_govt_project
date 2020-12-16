@@ -55,7 +55,7 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/welcome">হোম<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/boot">হোম<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="/fisheris_show">মৎস্য অধিদপ্তর</a>
@@ -77,8 +77,7 @@
 
 <main role="main" class="container">
 
-  <div class="starter-template">
-    <h1>Bootstrap starter template</h1>
+
 
   </div>
 
